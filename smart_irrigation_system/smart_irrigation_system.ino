@@ -1,39 +1,64 @@
-// Sensor pins
-#define sensorPower 7
-#define sensorPin 8
+// C++ code
+//
+#include <Servo.h>
+int moisture = 0;
+Servo servo;
 
-void setup() {
-	pinMode(sensorPower, OUTPUT);
-
-	// Initially keep the sensor OFF
-	digitalWrite(sensorPower, LOW);
-
-	Serial.begin(9600);
+void setup()
+{
+  pinMode(A0, OUTPUT);
+  pinMode(A1, INPUT);
+  Serial.begin(9600);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  //pinMode(7, OUTPUT);
+  servo.attach(7);
 }
 
-void loop() {
-	//get the reading from the function below and print it
-	int val = readSensor();
-	Serial.print("Digital Output: ");
-	Serial.println(val);
-
-	// Determine status of our soil moisture situation
-	if (val) {
-		Serial.println("Status: Soil is too dry - time to water!");
-	} else {
-		Serial.println("Status: Soil moisture is perfect");
-	}
-
-	delay(1000);	// Take a reading every second for testing
-					// Normally you shoul take reading perhaps every 12 hours
-	Serial.println();
+void loop()
+{
+  // Apply power to the soil moisture sensor
+  digitalWrite(A0, HIGH);
+  delay(10); // Wait for 10 millisecond(s)
+  moisture = analogRead(A1);
+  // Turn off the sensor to reduce metal corrosion
+  // over time
+  digitalWrite(A0, LOW);
+  Serial.println(moisture);
+  digitalWrite(8, LOW);
+  digitalWrite(9, LOW);
+  digitalWrite(10, LOW);
+  digitalWrite(11, LOW);
+  digitalWrite(12, LOW);
+  if (moisture < 200) {
+    digitalWrite(12, HIGH);
+  } else {
+    if (moisture < 400) {
+      digitalWrite(11, HIGH);
+    } else {
+      if (moisture < 600) {
+        digitalWrite(10, HIGH);
+      } else {
+        if (moisture < 800) {
+          digitalWrite(9, HIGH);
+        } else {
+          digitalWrite(8, HIGH);
+        }
+      }
+    }
+  }
+  ativaServo(moisture);
+  delay(100); // Wait for 100 millisecond(s)
 }
 
-//  This function returns the analog soil moisture measurement
-int readSensor() {
-	digitalWrite(sensorPower, HIGH);  // Turn the sensor ON
-	delay(10);              // Allow power to settle
-	int val = digitalRead(sensorPin); // Read the analog value form sensor
-	digitalWrite(sensorPower, LOW);   // Turn the sensor OFF
-	return val;             // Return analog moisture value
+void ativaServo(int x){
+  if(x<100){
+    servo.write(90);
+  }
+  else{
+    servo.write(0);
+  }
 }
