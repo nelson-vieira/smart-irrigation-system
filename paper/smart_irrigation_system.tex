@@ -4,71 +4,137 @@
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
-\usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage[rightcaption]{sidecap}
+\usepackage{wrapfig}
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {./images/} }
+
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Conference Paper Title*\\
-{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
-should not be used}
-\thanks{Identify applicable funding agency here. If none, delete this.}
-}
+\title{Sistema de Rega Inteligente}
 
-\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID}
+\author{\IEEEauthorblockN{1\textsuperscript{st} Tomás Marcos}
+\IEEEauthorblockA{\textit{Faculdade de Ciências Exatas e da Engenharia} \\
+\textit{Universidade da Madeira}\\
+Funchal, Portugal \\
+2037017@student.uma.pt}
 \and
-\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID}
-\and
-\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID}
-\and
-\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID}
-\and
-\IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID}
-\and
-\IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
-\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
-\textit{name of organization (of Aff.)}\\
-City, Country \\
-email address or ORCID}
+\IEEEauthorblockN{2\textsuperscript{nd} Nelson Vieira}
+\IEEEauthorblockA{\textit{Faculdade de Ciências Exatas e da Engenharia} \\
+\textit{Universidade da Madeira}\\
+Funchal, Portugal \\
+2080511@student.uma.pt}
 }
 
 \maketitle
 
 \begin{abstract}
-This document is a model and instructions for \LaTeX.
-This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
-or Math in Paper Title or Abstract.
+A água é um recurso precioso, considerado um dos bens essenciais para a vida. 
+No entanto, cada vez mais, ouve-se que é um recurso escasso e que rapidamente está a se esgotar. 
+A água é utilizada para muitas atividades, sejam elas industriais, comerciais ou de lazer. 
+Existem muitas iniciativas que pretendem reduzir o consumo e o desperdício de água. 
+Pretendemos explorar um sistema de rega inteligente que utilize sensores de forma a 
+reduzir a quantidade de água que é utilizada.
 \end{abstract}
 
 \begin{IEEEkeywords}
-component, formatting, style, styling, insert
+IoT, Computação ubíqua, Rega inteligente, Análise literária.
 \end{IEEEkeywords}
 
-\section{Introduction}
-This document is a model and instructions for \LaTeX.
-Please observe the conference page limits. 
+\section{Introdução}
+\IEEEPARstart{A} sustentabilidade global não será alcançada sem garantir a 
+disponibilidade de água preciosa para todos os consumidores. Apesar de ser um 
+dos principais objetivos da agenda da UN2030 para o desenvolvimento global sustentável, 
+a atual escassez de água está a crescer rapidamente e afetando um número crescente de consumidores 
+de água residencial, comercial, industrial e agrícola em todo o mundo. Espera-se que a procura 
+global da água suba 55\%, enquanto atualmente, cerca de 25\% das grandes cidades estão a passar 
+por alguns níveis de stress hídrico. 
+
+As mudanças climáticas, secas graves, crescimento populacional, aumento da procura e má 
+administração durante as últimas décadas enfatizaram ainda mais os recursos escassos da água 
+doce em todo o mundo e resultaram numa grave escassez de água para cerca de 4 bilhões de pessoas, 
+pelo menos um mês anualmente. \cite{}
+
+Um dos setores de atividade humana que tem maior consumo dos recursos hídricos é a agricultura, 
+"aproximadamente 100 vezes mais do que o uso pessoal é consumida pela alimentação e agricultura 
+e quase 70\% das águas fluviais e subterrâneas são utilizadas na irrigação" \cite{}. 
+Várias iniciativas foram tomadas para ajudar a minimizar o desperdício de água neste setor, 
+mas, no entanto, não aparentam ter muito sucesso, ou não são apelativas, devido aos 
+elevados custos associados. Os sensores comerciais para sistemas destinados à 
+agricultura e à sua irrigação são muito caros, tornando impossível aos pequenos 
+agricultores a implementação deste tipo de sistema nas suas explorações. 
+No entanto, os fabricantes oferecem actualmente sensores de baixo custo que podem 
+ser ligados a nós para implementar sistemas de baixo custo para a gestão da 
+irrigação e monitorização agrícola. Além disso, devido ao interesse em sensores de 
+baixo custo para monitorizar a agricultura e a água, 
+novos sensores de baixo custo estão a ser propostos em vários estudos. \cite{}
+
+Por estes motivos é importante gerir o consumo de água no nosso dia a dia, portanto o que 
+propomos é um sistema de rega inteligente que faz a medição da humidade do solo e rega 
+as plantas apenas durante o tempo necessário poupando o gasto desnecessário da água de rega.
+
+\subsection{Propostas existentes}
+Segundo um estudo realizado por L. García, existem 178 artigos relacionados com  
+"IoT irrigation, IoT irrigation system, and smart irrigation" \cite{}, escritos em Inglês, 
+no período de entre os anos de 2014 e 2019, inclusive, dos quais 106 artigos estão 
+relacionados com a utilização de sensores para monitorizar o estado do solo. 
+Destes 106 artigos estudados, todos os artigos abordam a humidade do solo, 
+9 discutem a temperatura do solo, 4 exploram o ph do solo e 3 mencionam os 
+nutrientes presentes no solo.
+
+Dos artigos que mencionam o tipo de sensor utilizado, o sensor mais popular é o 
+e YL69 (SparkFun Electronics, Niwot, CO, USA). Este sensor tem um baixo custo e 
+foi criado para operar especificamente com o Arduino. \cite{}
+
+\subsection{Questões de investigação}
+O trabalho descrito neste artigo pertende responder a algumas questões que foram 
+levantadas após alguma investigação sobre soluções já existentes no que diz respeito 
+a sistemas de rega. O sistema proposto permite poupar água? Qual a quantidade de água 
+que é possível poupar?  Qual é o custo associado à integração de sensores num sistema 
+de rega convencional? Em comparação com um sistema de rega convencional, 
+qual a poupança que um sistema de rega inteligente proporciona?
+
+
+
+\subsection{O nosso sistema}
+O sistema de rega inteligente que propomos faz uso do Arduino e de um sensor de 
+humidade do solo, mais propriamente serão usados os seguintes modelos:
+
+\begin{figure}
+    \includegraphics[scale=0.2]{arduino.jpg}
+    \caption{Dispositivo Arduino}
+    \label{fig:my_label1}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[scale=0.1]{sensor.jpg}
+    \caption{Sensor de humidade}
+    \label{fig:my_label2}
+\end{figure}
+
+O dispositivo Arduino, como mostra a figura \ref{fig:my_label1}, que usamos é o 
+modelo MKR 1000 WiFi pois é um modelo com capacidade wifi, o que facilita na 
+transmissão dos dados para o utilizador que poderá vê-los no seu smartphone. 
+
+O sensor de humidade, ilustrado pela figura \ref{fig:my_label2}, é um 
+sensor normal para esta função, tem valores de 0 a 1023, serão usados valores 
+incrementais entre os valores mínimo e máximo para fazer uma distinção do grau 
+de escassez do solo. Também pode ser usado um Raspberry Pi para guardar dados do Arduino.
+
+% END OF ABSTRACT
+
+
+
+
+
+
+
+
 
 \section{Ease of Use}
 
@@ -173,7 +239,7 @@ surrounding equation.
 \item There is no period after the ``et'' in the Latin abbreviation ``et al.''.
 \item The abbreviation ``i.e.'' means ``that is'', and the abbreviation ``e.g.'' means ``for example''.
 \end{itemize}
-An excellent style manual for science writers is \cite{b7}.
+An excellent style manual for science writers is.
 
 \subsection{Authors and Affiliations}
 \textbf{The class file is designed for, but not limited to, six authors.} A 
@@ -244,45 +310,23 @@ with units. In the example, write ``Magnetization (A/m)'' or ``Magnetization
 quantities and units. For example, write ``Temperature (K)'', not 
 ``Temperature/K''.
 
+\section{Conclusão}
+
+O Argon2 é um dos algoritmos de hash mais seguros da atualidade, é inspirado nalguns 
+algoritmos também bastante seguros como o bcrypt e por isso acaba por ser uma 
+evolução lógica dos algoritmos de hash. Apenas uma versão do algoritmo tem 
+vulnerabilidades, mas estas vulnerabilidades podem ser negadas como explicado na 
+secção “Análise criptográfica”. Este algoritmo tem muitas vantagens, mas uma 
+desvantagem que pode causar problemas nalgumas situações é o fato do algoritmo 
+poder ser muito lento caso sejam modificados alguns parâmetros, é necessário 
+criar um equilíbrio nestas situações entre segurança e tempo de execução.
+
 \section*{Acknowledgment}
 
-The preferred spelling of the word ``acknowledgment'' in America is without 
-an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-acknowledgments in the unnumbered footnote on the first page.
+Gostaria de agradecer a todas as pessoas que me apoiaram até agora, incluindo
+família, amigos e professores.
 
-\section*{References}
-
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
-
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
-
-\begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
-\end{thebibliography}
-\vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+\bibliographystyle{IEEEtran}
+\bibliography{references}
 
 \end{document}
