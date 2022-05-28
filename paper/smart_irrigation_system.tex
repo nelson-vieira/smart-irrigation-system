@@ -62,7 +62,7 @@ pelo menos um mês anualmente. \cite{salehi2022global}
 
 Um dos setores de atividade humana que tem maior consumo dos recursos hídricos é a agricultura, 
 "aproximadamente 100 vezes mais do que o uso pessoal é consumida pela alimentação e agricultura 
-e quase 70\% das águas fluviais e subterrâneas são utilizadas na irrigação" \cite{nawandar2019iot}. 
+e quase 70\% das águas fluviais e subterrâneas são utilizadas na irrigação". \cite{nawandar2019iot} 
 Várias iniciativas foram tomadas para ajudar a minimizar o desperdício de água neste setor, 
 mas, no entanto, não aparentam ter muito sucesso, ou não são apelativas, devido aos 
 elevados custos associados. Os sensores comerciais para sistemas destinados à 
@@ -79,7 +79,7 @@ propomos é um sistema de rega inteligente que faz a medição da humidade do so
 as plantas apenas durante o tempo necessário poupando o gasto desnecessário da água de rega.
 
 \section{Trabalhos Relacionados}
-Segundo um estudo realizado por L. García, existem 178 artigos relacionados com  
+Segundo um estudo realizado por García et al, existem 178 artigos relacionados com  
 "IoT irrigation, IoT irrigation system, and smart irrigation" \cite{garcia2020iot}, escritos em Inglês, 
 no período de entre os anos de 2014 e 2019, inclusive, dos quais 106 artigos estão 
 relacionados com a utilização de sensores para monitorizar o estado do solo. 
@@ -91,9 +91,10 @@ Dos artigos que mencionam o tipo de sensor utilizado, o sensor mais popular é o
 e YL69 (SparkFun Electronics, Niwot, CO, USA). Este sensor tem um baixo custo e 
 foi criado para operar especificamente com o Arduino. \cite{garcia2020iot}
 
-\subsection{Artigo xpto}
+\subsection{Caso Relacionado}
 
-
+Muitos sistemas de rega inteligente têm por base sensores de humidade so solo, como 
+é o caso do sistema proposto por Goap et al \cite{goap2018an} em que 
 
 \section{Métodos e Metadologias}
 O trabalho descrito neste artigo pertende responder a algumas questões que foram 
@@ -103,11 +104,19 @@ que é possível poupar?  Qual é o custo associado à integração de sensores 
 de rega convencional? Em comparação com um sistema de rega convencional, 
 qual a poupança que um sistema de rega inteligente proporciona?
 
-
-
 \subsection{O nosso sistema}
-O sistema de rega inteligente que propomos faz uso do Arduino e de um sensor de 
-humidade do solo, mais propriamente serão usados os seguintes modelos:
+
+O sistema de rega inteligente que propomos faz uso do Arduino MKR 1000 WiFi, de um sensor de 
+humidade do solo, modelo 123, de uma breadboard, de vários LEDs e uma resistência de 200 ohms. 
+Decidimos usar este modelo do Arduino pela ligação à rede por Wi-fi que possui, o que nos 
+permite analisar o sistema sem termos de estar no local da instalação, o que podemos fazer através do 
+Arduino Cloud, que envia-nos os resultados do sensor que estamos a usar. Caso o utilizador 
+queira ver o estado da humidade do solo, pode perceber pelos LEDs que usamos no sistema, estes 
+LEDs mostram um feedback visual do estado atual do solo, decidimos representar este 
+feedback com 5 LEDs de várias cores que vão desde o verde até ao vermelho, portanto 
+se o LED verde estiver acesso quer dizer que o solo está suficientemente humido, se 
+o LED laranja estiver acesso quer dizer que solo requer um pouco de água e se o LED
+vermelho estiver acesso quer dizer que o solo está seco, e por isso tem que ser regado.
 
 \begin{figure}
     \centering
@@ -115,13 +124,6 @@ humidade do solo, mais propriamente serão usados os seguintes modelos:
     \caption{Dispositivo Arduino}
     \label{fig:my_label1}
 \end{figure}
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[scale=0.1]{sensor.jpg}
-%     \caption{Sensor de humidade}
-%     \label{fig:my_label2}
-% \end{figure}
 
 O dispositivo Arduino, como mostra a figura \ref{fig:my_label1}, que usamos é o 
 modelo MKR 1000 WiFi pois é um modelo com capacidade wifi, o que facilita na 
@@ -210,14 +212,18 @@ de escassez do solo. Também pode ser usado um Raspberry Pi para guardar dados d
 
 \section{Conclusão}
 
-O Argon2 é um dos algoritmos de hash mais seguros da atualidade, é inspirado nalguns 
-algoritmos também bastante seguros como o bcrypt e por isso acaba por ser uma 
-evolução lógica dos algoritmos de hash. Apenas uma versão do algoritmo tem 
-vulnerabilidades, mas estas vulnerabilidades podem ser negadas como explicado na 
-secção “Análise criptográfica”. Este algoritmo tem muitas vantagens, mas uma 
-desvantagem que pode causar problemas nalgumas situações é o fato do algoritmo 
-poder ser muito lento caso sejam modificados alguns parâmetros, é necessário 
-criar um equilíbrio nestas situações entre segurança e tempo de execução.
+Um dos maiores problemas que vamos enfrentar num futuro próximo é a escassez de água potável,
+e sendo a água um bem essencial para a sobrevivência humana, existe uma preocupação 
+em criar sistemas que possibilitem uma melhor gestão da água. Por isto mesmo 
+é que proposmos este sistema de rega de água inteligente. Apesar de não ser um 
+sistema muito robusto e que pela sua natureza funciona melhor em pequena escala, este 
+poderia ser uma ponte para a criação de um sistema mais robusto que funciona-se bem 
+tanto áreas pequenas como jardins ou estufas, como também em áreas maiores como campos agrículas.
+
+Para trabalho futuro pode ser integrado um Raspberry Pi neste sistema para uma melhor 
+gestão de informação. Um dos pontos fracos que o sistema proposto tem é não 
+ter em conta a previsão do tempo o que pode tornar este sistema menos eficiente, 
+portanto ter uma previsão...
 
 \section*{Acknowledgment}
 
