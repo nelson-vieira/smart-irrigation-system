@@ -63,38 +63,18 @@ void loop()
 		}
 	}
 	ativaServo(moisture);
-	delay(100); // Wait for 100 millisecond(s)
+	//delay(100); // Wait for 100 millisecond(s)
 }
 
 void ativaServo(int moist)
 {
-	//   if(moist<100){
-	//     servo.write(90);
-	//   }
-	//   else{
-	//     servo.write(0);
-	//   }
-	if (moist < 100)
-	{
-    servo.write(180);
-    delay(5);
-		//for (pos = 0; pos <= 180; pos += 1)
-		//{
-			// tell servo to go to position in variable 'pos'
-			//servo.write(pos);
-			// wait 15 ms for servo to reach the position
-			//delay(5); // Wait for 15 millisecond(s)
-		//}
-	}
-	else
-	{
-		servo.write(0);
-		// for (pos = 180; pos >= 0; pos -= 1)
-		// {
-		// 	// tell servo to go to position in variable 'pos'
-		// 	servo.write(pos);
-		// 	// wait 15 ms for servo to reach the position
-		// 	delay(5); // Wait for 15 millisecond(s)
-		// }
-	}
+	for (pos = 0; pos <= 180; pos += 50) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    servo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(50);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = 180; pos >= 0; pos -= 50) { // goes from 180 degrees to 0 degrees
+    servo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(50);                       // waits 15ms for the servo to reach the position
+  }
 }

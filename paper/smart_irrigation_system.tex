@@ -6,8 +6,10 @@
 \usepackage{algorithmic}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{colortbl}
 \usepackage[rightcaption]{sidecap}
 \usepackage{wrapfig}
+\usepackage{adjustbox}
 \usepackage{graphicx} %package to manage images
 \graphicspath{ {./images/} }
 
@@ -133,6 +135,49 @@ O sensor de humidade, ilustrado pela figura \ref{fig:my_label1}, é um
 sensor normal para esta função, tem valores de 0 a 1023, serão usados valores 
 incrementais entre os valores mínimo e máximo para fazer uma distinção do grau 
 de escassez do solo. Também pode ser usado um Raspberry Pi para guardar dados do Arduino.
+
+\subsubsection{Preço do sistema}
+
+Na Tabela \ref{pricetable} podemos verificar o custo do sistema, isto inclui apenas
+os custos associados aos sensores e equipamento estritamente necessário à criação deste sistema, 
+portanto custo associados a produtos ou serviços externos não são considerados para esta análise, 
+como por exemplo o custo de água gasta, pois estes valores variam ao longo do tempo e por 
+região e seria difícil fazer uma estimativa para tal.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \rowcolor{gray}
+    Item & Preço \\
+    \hline
+    Arduino MKR 1000 WiFi & 300 € \\
+    \hline
+    Sensor de humidade & 300 € \\
+    \hline
+    Servo motor & 300 € \\
+    \hline
+    LEDs & 300 € \\
+    \hline
+    Resistência & 300 € \\
+    \hline
+    Fios e outros cabos e Breadboard & 300 € \\
+    \hline
+    \rowcolor{gray}
+    Total & 300 € \\
+    \hline
+\end{tabular}
+\vspace{1em}
+\caption{Custo do material utilizado}
+\label{pricetable}
+\end{table}
+
+Como podemos verificar o custo total deste sistema, ou de um sistema de rega inteligente similar,
+não é muito elevado. Apesar de ser difícil estimar um valor concreto para o custo de água gasta
+podemos assumir que seria um custo muito mais baixo do que o qual é no momento para um 
+utilizador que não use um sistema de rega inteligente, pois este tipo de sistema está desenhado 
+para poupar água.
 
 % END OF ABSTRACT
 
