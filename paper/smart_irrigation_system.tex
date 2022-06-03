@@ -48,10 +48,11 @@ inteligente que utilize sensores de forma a reduzir a quantidade de água que
 \end{abstract}
 
 \begin{IEEEkeywords}
-IoT, Computação ubíqua, Rega inteligente, Análise literária.
+IoT, Computação ubíqua, Rega inteligente.
 \end{IEEEkeywords}
 
 \section{Introdução}
+
 \IEEEPARstart{A} sustentabilidade global não será alcançada sem garantir a 
 disponibilidade de água preciosa para todos os consumidores. Apesar de ser um 
 dos principais objetivos da agenda da UN2030 \cite{un2015agenda} para o desenvolvimento 
@@ -99,17 +100,94 @@ medição da humidade do solo e rega as plantas apenas durante o tempo
 necessário poupando o gasto desnecessário da água de rega.
 
 \section{Trabalhos Relacionados}
+
 Segundo um estudo realizado por García et al, existem 178 artigos 
 relacionados com  "IoT irrigation, IoT irrigation system, and smart 
-irrigation" \cite{garcia2020iot}, escritos em Inglês, no período de entre os 
+irrigation" \cite{garcia2020iot}, escritos em inglês, no período de entre os 
 anos de 2014 e 2019, inclusive, dos quais 106 artigos estão relacionados com a 
 utilização de sensores para monitorizar o estado do solo. Destes 106 artigos 
 estudados, todos os artigos abordam a humidade do solo, 9 discutem a temperatura 
 do solo, 4 exploram o ph do solo e 3 mencionam os nutrientes presentes no solo.
 
+Na Índia, 10\% da área do país é coberta por plantações de arroz \cite{zampieri2018surface}. 
+Além disso, 20\% da população indiana está 
+abaixo dos níveis de pobreza e 15\% é insegura em termos alimentares. 
+Por conseguinte, a baixa produção alimentar afeta tanto a população como a economia. 
+Em 2002, a estação das monções produziu a menor quantidade de precipitação nos 
+últimos 130 anos. Isso resultou numa perda da produção de arroz devido à falta 
+de água doce. Para determinar a seca causada por anomalias nas águas superficiais, 
+foi utilizado o Standardized Precipitation Evapotranspiration Index (SPEI). 
+Estes índices e a informação recolhida a partir de sensores que monitorizam o ambiente, 
+o solo e a água podem ser utilizados para determinar o estado atual da água e a 
+possibilidade de cobrir todas as necessidades de água doce. Os países com maiores 
+fundos já implementam sistemas de gestão e reutilização da água com o objetivo de 
+otimizar a utilização da água e reduzir o impacto ambiental causado pela utilização 
+de grandes quantidades de água. No entanto, alguns países podem considerar que estas 
+soluções são dispendiosas. 
+Os sensores comerciais para sistemas destinados à agricultura e à sua irrigação 
+são muito caros, impossibilitando aos pequenos agricultores a implementação deste 
+tipo de sistema nas suas explorações. No entanto, os fabricantes oferecem atualmente 
+sensores de baixo custo que podem ser ligados a nós para implementar sistemas de baixo 
+custo para a gestão da irrigação e monitorização agrícola. Além disso, devido ao interesse 
+em sensores de baixo custo para monitorizar a agricultura e a água, estão a ser propostos 
+novos sensores de baixo custo em investigações tais como um sensor de monitorização do 
+stress hídrico foliar \cite{daskalakis2018}, um sensor de humidade do solo de vários níveis composto 
+por anéis de cobre colocados ao longo de um tubo de PVC \cite{guruprasadh2017intelligent}, 
+um sensor de monitorização da salinidade da água feito com bobinas de 
+cobre \cite{parra2013low} ou um sensor de turbidez da água 
+feito com emissores e recetores de chumbo colorido e infravermelho \cite{sendra2013low}.
+
+Devido aos recentes avanços nos sensores para a implementação de sistemas de 
+irrigação para a agricultura e à evolução das tecnologias WSN e IoT que podem ser 
+aplicadas no desenvolvimento destes sistemas, apresentamos um estudo destinado a resumir 
+o estado atual da arte em matéria de sistemas de irrigação inteligentes. Neste inquérito, 
+vamos fornecer uma visão geral do estado da investigação relativa aos sistemas de irrigação. 
+Iremos determinar os parâmetros que são monitorizados nos sistemas de irrigação 
+relativamente à quantidade e qualidade da água, características do solo, condições 
+meteorológicas e utilização de fertilizantes. Forneceremos uma visão geral dos nós mais 
+utilizados e das tecnologias sem fios empregados para implementar sistemas de irrigação 
+inteligentes baseados em WSN e IoT. Finalmente, discutiremos os desafios e as melhores 
+práticas para a implementação de sistemas de irrigação baseados em sensores.
+
+
+
+
+
+Nas actividades agrícolas que utilizam insumos de água, também conhecidas como 
+agricultura irrigada, existem diferentes maneiras de distribuir a água. 
+As diferentes opções apresentam eficiência diferente e, em alguns casos, 
+uma forma específica deve ser utilizada para uma cultura específica. 
+As formas específicas de irrigação têm uma grande variedade, mas podemos 
+dividi-las nas seguintes categorias: Podemos considerar a forma de distribuição da água: 
+(i) irrigação por inundação, (ii) irrigação por aspersão, (iii) irrigação por gotejamento, 
+e (iv) irrigação por nebulização. Quanto à existência de sistemas de detecção, podemos ter: 
+(i) irrigação sem qualquer consideração, quando a quantidade de água não é calculada ou estimada, 
+(ii) irrigação programada, quando a água é fornecida de acordo com as necessidades 
+estimadas num período do ano, (iii) irrigação ad hoc, quando a quantidade de água 
+é calculada com base nas medições dos sensores. A grande maioria dos artigos incluídos 
+nesta secção propõe a utilização de bombas e válvulas para distribuir a água em conjunto 
+com sensores para medir os parâmetros ambientais, a fim de calcular as necessidades de água. 
+Dos 89 artigos avaliados nesta secção, 83 incluem informações claras sobre o sistema de 
+irrigação proposto, os outros seis apenas mencionam que incluem actuadores para irrigação, 
+ver Figura 3. Estes 83 incluem diferentes níveis de detalhe, existem 49 documentos que apenas 
+indicam que existem motores/bombas no seu sistema (40 documentos) ou válvulas 
+(nove documentos) sem mais detalhes. Dos documentos que oferecem mais pormenores, 
+19 incluem aspersores (o sistema mais utilizado) \cite{gonzalez2018iot, ahmed2016intelligation, yusuf2005information, cambra2017iot, arvind2017automated, ammour2018factory, singh2019iot, wu2016secure, solanki2017conceptual, wasson2017integration, johar2018iot, ryu2015design, reche2014smart, chieochan2017internet, arumugam2018internet, boonchieng2018smart, rawal2017iot, guo2015design, khattab2016design}, 
+oito utilizam irrigação por gotejamento \cite{daskalakis2018uw, nawandar2019iot, barkunan2019smart, sivaprasath2016arduino, kumar2017internet, kodali2016iot, abidin2015web, banumathi2017android}, dois propõem a 
+utilização de pulverizadores \cite{mechsy2017mobile}, e os restantes utilizam um sistema de irrigação 
+muito específico (robts \cite{rahul2018iot}, pivot, pistola de chuva \cite{vasu2017intelligent} 
+ou pode ser aplicada a múltiplos sistemas \cite{agale2017automated}). Em conjunto com o sistema de irrigação principal, 
+três papéis propõem o uso de um sistema de nebulização [41,43,51] e dois papéis 
+propõem o uso de fertirrigação nos seus sistemas [42,52]. 
+
 Dos artigos que mencionam o tipo de sensor utilizado, o sensor mais popular é o 
 e YL69 (SparkFun Electronics, Niwot, CO, USA). Este sensor tem um baixo custo e 
 foi criado para operar especificamente com o Arduino. \cite{garcia2020iot}
+
+Muitos sistemas de rega inteligente têm por base sensores de humidade so solo, como 
+é o caso dos sistemas que vamos analisar de seguida.
+
+\subsection{Caso de Abbas}
 
 No estudo realizado por Abbas et al. \cite{abbas2014smart}, os autores propõem 
 um sistema de irrigação inteligente no qual utilizaram uma rede de sensores sem 
@@ -120,10 +198,27 @@ No entanto, os autores referem que seria necessário ter em consideração outro
 aspetos, tais como a estação do ano, pois no Verão, é necessário regar as plantas 
 com maior freqência.
 
-\subsection{Caso Relacionado}
+\subsection{Caso de Goap}
 
 Muitos sistemas de rega inteligente têm por base sensores de humidade so solo, como 
 é o caso do sistema proposto por Goap et al \cite{goap2018an} em que 
+
+A humidade do solo é um parâmetro crítico para o desenvolvimento para inteligente
+Sistema de Rigação. A umidade do solo é afetada por vários ambiente
+variáveis mentais, por exemplo, temperatura do ar, umidade do ar, UV, solo
+Peratura, etc. com avanço nas tecnologias, o clima
+A precisão da previsão melhorou significativa e o clima para sempre
+Os dados fundidos podem ser usados para previsão de alterações na umidade do solo.
+Este artigo é uma arquitetura de irrigação inteligente baseada em IoT junto
+com uma abordagem baseada em aprendizado de máquina híbrida para prever o solo
+Umidade. O algoritmo proposto usa os dados dos sensores do passado recente e
+A data prevista para a previsão da umidade do solo da próxima
+Dias. O valor previsto da umidade do solo é melhor em termos de seus
+Precisão e taxa de erro. Além disso, a abordagem de previsão é integrada
+Protótipo do sistema independente. O protótipo do sistema é custa ef-
+FECTIVO, It é baseado nas tecnologias padrão abertas. O modo automático
+O torna um sistema inteligente e pode ser ainda mais personalizado para aplicação
+Cenário específico.
 
 \section{Métodos e Metadologias}
 
@@ -220,7 +315,7 @@ atendendo ao facto de que os preços descritos na tabela \ref{pricetable} inclue
 produtos e a utilização do servo motor neste sistema é para efeitos de simulação 
 de uma bomba de água, o preço real do sistema seria ainda mais barato, o preço mais 
 baixo poderia ser por volta de 40 €, o que tornaria este sistema atraente para 
-potenciais consumidores interessados em sustentabilidade e na redução da sua pegada 
+potenciais consumidores interessados na sustentabilidade e na redução da sua pegada 
 ambiental.
 
 \subsection{Testes ao sistema}
