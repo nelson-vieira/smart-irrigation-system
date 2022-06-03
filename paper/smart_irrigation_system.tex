@@ -39,11 +39,12 @@ Funchal, Portugal \\
 
 \begin{abstract}
 A água é um recurso precioso, considerado um dos bens essenciais para a vida. 
-No entanto, cada vez mais, ouve-se que é um recurso escasso e que rapidamente está a se esgotar. 
-A água é utilizada para muitas atividades, sejam elas industriais, comerciais ou de lazer. 
-Existem muitas iniciativas que pretendem reduzir o consumo e o desperdício de água. 
-Pretendemos explorar um sistema de rega inteligente que utilize sensores de forma a 
-reduzir a quantidade de água que é utilizada. \\
+No entanto, cada vez mais, ouve-se que é um recurso escasso e que rapidamente 
+está a se esgotar. A água é utilizada para muitas atividades, sejam elas industriais, 
+comerciais ou de lazer. Existem muitas iniciativas que pretendem reduzir o 
+consumo e o desperdício de água. Pretendemos explorar um sistema de rega 
+inteligente que utilize sensores de forma a reduzir a quantidade de água que 
+é utilizada. \\
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -53,63 +54,71 @@ IoT, Computação ubíqua, Rega inteligente, Análise literária.
 \section{Introdução}
 \IEEEPARstart{A} sustentabilidade global não será alcançada sem garantir a 
 disponibilidade de água preciosa para todos os consumidores. Apesar de ser um 
-dos principais objetivos da agenda da UN2030 \cite{un2015agenda} para o desenvolvimento global sustentável, 
-a atual escassez de água está a crescer rapidamente e afetando um número crescente de consumidores 
-de água residencial, comercial, industrial e agrícola em todo o mundo \cite{mishra2021water}. Espera-se que a procura 
-global da água suba 55\%, enquanto atualmente, cerca de 25\% das grandes cidades estão a passar 
-por alguns níveis de stress hídrico \cite{josefine2021differentiated}.
+dos principais objetivos da agenda da UN2030 \cite{un2015agenda} para o desenvolvimento 
+global sustentável, a atual escassez de água está a crescer rapidamente e 
+afetando um número crescente de consumidores de água residencial, comercial, 
+industrial e agrícola em todo o mundo \cite{mishra2021water}. Espera-se que a 
+procura global da água suba 55\%, enquanto atualmente, cerca de 25\% das grandes 
+cidades estão a passar por alguns níveis de stress hídrico \cite{josefine2021differentiated}.
 
-As mudanças climáticas, secas graves, crescimento populacional, aumento da procura e má 
-administração durante as últimas décadas enfatizaram ainda mais os recursos escassos da água 
-doce em todo o mundo e resultaram numa grave escassez de água para cerca de 4 bilhões de pessoas, 
-pelo menos um mês anualmente \cite{jafari2018assessing} \cite{unicef2019progress} \cite{orimoloye2021spatial}. \cite{salehi2022global}
+As mudanças climáticas, secas graves, crescimento populacional, aumento da 
+procura e má administração durante as últimas décadas enfatizaram ainda mais 
+os recursos escassos da água doce em todo o mundo e resultaram numa grave 
+escassez de água para cerca de 4 bilhões de pessoas, pelo menos um mês 
+anualmente \cite{jafari2018assessing} \cite{unicef2019progress} \cite{orimoloye2021spatial}. \cite{salehi2022global}
 
-Um dos setores de atividade humana que tem maior consumo dos recursos hídricos é a agricultura, 
-"aproximadamente 100 vezes mais do que o uso pessoal é consumida pela alimentação e agricultura 
-e quase 70\% das águas fluviais e subterrâneas são utilizadas na irrigação". \cite{nawandar2019iot} 
-Apenas 17\% das terras agrícolas, de todo o mundo são irrigadas. Apesar de por todo o mundo, se verificar 
-um aumento de terrenos irrigados, a área irrigada per capita tem estado a diminuir desde 1990 
-devido ao rápido crescimento global. \cite{pimentelwater}
+Um dos setores de atividade humana que tem maior consumo dos recursos hídricos 
+é a agricultura, "aproximadamente 100 vezes mais do que o uso pessoal é consumida 
+pela alimentação e agricultura e quase 70\% das águas fluviais e subterrâneas 
+são utilizadas na irrigação". \cite{nawandar2019iot} Apenas 17\% das terras 
+agrícolas, de todo o mundo são irrigadas. Apesar de por todo o mundo, se verificar 
+um aumento de terrenos irrigados, a área irrigada per capita tem estado a diminuir 
+desde 1990 devido ao rápido crescimento global. \cite{pimentelwater}
 
-Existem, atualmente, várias tecnologias de irrigação, sendo as mais comuns a irrigação por inundação e irrigação 
-por aspersão. Outros métodos mais focados, como a irrigação gota-a-gota têm maior eficiência hídrica. Esta 
-técnica usa uma quantidade inferior de água, entre 30\% a 50\%, quando comparada com uma técnica de 
-irrigação superficial. \cite{pimentelwater}
+Existem, atualmente, várias tecnologias de irrigação, sendo as mais comuns 
+a irrigação por inundação e irrigação por aspersão. Outros métodos mais 
+focados, como a irrigação gota-a-gota têm maior eficiência hídrica. Esta 
+técnica usa uma quantidade inferior de água, entre 30\% a 50\%, quando 
+comparada com uma técnica de irrigação superficial. \cite{pimentelwater}
 
-Várias iniciativas foram tomadas para ajudar a minimizar o desperdício de água neste setor, 
-mas, no entanto, não aparentam ter muito sucesso, ou não são apelativas, devido aos 
-elevados custos associados. Os sensores comerciais para sistemas destinados à 
-agricultura e à sua irrigação são muito caros, tornando impossível aos pequenos 
-agricultores a implementação deste tipo de sistema nas suas explorações. 
-No entanto, os fabricantes oferecem actualmente sensores de baixo custo que podem 
+Várias iniciativas foram tomadas para ajudar a minimizar o desperdício 
+de água neste setor, mas, no entanto, não aparentam ter muito sucesso, 
+ou não são apelativas, devido aos elevados custos associados. 
+Os sensores comerciais para sistemas destinados à agricultura e à sua 
+irrigação são muito caros, tornando impossível aos pequenos agricultores 
+a implementação deste tipo de sistema nas suas explorações. No entanto, 
+os fabricantes oferecem actualmente sensores de baixo custo que podem 
 ser ligados a nós para implementar sistemas de baixo custo para a gestão da 
-irrigação e monitorização agrícola. Além disso, devido ao interesse em sensores de 
-baixo custo para monitorizar a agricultura e a água, 
+irrigação e monitorização agrícola. Além disso, devido ao interesse em 
+sensores de baixo custo para monitorizar a agricultura e a água, 
 novos sensores de baixo custo estão a ser propostos em vários estudos. \cite{garcia2020iot}
 
-Por estes motivos é importante gerir o consumo de água no nosso dia a dia, portanto o que 
-propomos é um sistema de rega inteligente que faz a medição da humidade do solo e rega 
-as plantas apenas durante o tempo necessário poupando o gasto desnecessário da água de rega.
+Por estes motivos é importante gerir o consumo de água no nosso dia a dia, 
+portanto o que propomos é um sistema de rega inteligente que faz a 
+medição da humidade do solo e rega as plantas apenas durante o tempo 
+necessário poupando o gasto desnecessário da água de rega.
 
 \section{Trabalhos Relacionados}
-Segundo um estudo realizado por García et al, existem 178 artigos relacionados com  
-"IoT irrigation, IoT irrigation system, and smart irrigation" \cite{garcia2020iot}, escritos em Inglês, 
-no período de entre os anos de 2014 e 2019, inclusive, dos quais 106 artigos estão 
-relacionados com a utilização de sensores para monitorizar o estado do solo. 
-Destes 106 artigos estudados, todos os artigos abordam a humidade do solo, 
-9 discutem a temperatura do solo, 4 exploram o ph do solo e 3 mencionam os 
-nutrientes presentes no solo.
+Segundo um estudo realizado por García et al, existem 178 artigos 
+relacionados com  "IoT irrigation, IoT irrigation system, and smart 
+irrigation" \cite{garcia2020iot}, escritos em Inglês, no período de entre os 
+anos de 2014 e 2019, inclusive, dos quais 106 artigos estão relacionados com a 
+utilização de sensores para monitorizar o estado do solo. Destes 106 artigos 
+estudados, todos os artigos abordam a humidade do solo, 9 discutem a temperatura 
+do solo, 4 exploram o ph do solo e 3 mencionam os nutrientes presentes no solo.
 
 Dos artigos que mencionam o tipo de sensor utilizado, o sensor mais popular é o 
 e YL69 (SparkFun Electronics, Niwot, CO, USA). Este sensor tem um baixo custo e 
 foi criado para operar especificamente com o Arduino. \cite{garcia2020iot}
 
-No estudo realizado por Abbas et al. \cite{abbas2014smart}, os autores propõem um sistema de irrigação inteligente
-no qual utilizaram uma rede de sensores sem fios para detetar a humidade no solo. Um dos focos do estudo proposto 
-foi a medição do tempo de resposta e a capacidade do sistema identificar a capacidade de retenção de água do tipo 
-de solo no qual os sensores estavam localizados. No entanto, os autores referem que seria necessário ter em 
-consideração outros aspetos, tais como a estação do ano, pois no Verão, é necessário regar as plantas
- com maior freqência.
+No estudo realizado por Abbas et al. \cite{abbas2014smart}, os autores propõem 
+um sistema de irrigação inteligente no qual utilizaram uma rede de sensores sem 
+fios para detetar a humidade no solo. Um dos focos do estudo proposto foi a medição 
+do tempo de resposta e a capacidade do sistema identificar a capacidade de 
+retenção de água do tipo de solo no qual os sensores estavam localizados. 
+No entanto, os autores referem que seria necessário ter em consideração outros 
+aspetos, tais como a estação do ano, pois no Verão, é necessário regar as plantas 
+com maior freqência.
 
 \subsection{Caso Relacionado}
 
@@ -157,7 +166,7 @@ para o utilizador. Também poderia ser usado um Raspberry Pi para guardar dados 
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.5]{soil_moisture_circuit_schema.png}
+    \includegraphics[scale=0.5]{soil-moisture-circuit-schema.png}
     \caption{Esquema do Circuito}
     \label{fig:circuit}
 \end{figure}
@@ -234,7 +243,7 @@ resultados obtidos num dos testes, podem ser verificados pelo gráfico da Figura
 
 \begin{figure}
     \centering
-    \includegraphics[scale=0.5]{Humidity_test_graph.png}
+    \includegraphics[scale=0.5]{humidity-test-graph.png}
     \caption{Gráfico dos resultados do teste realizado}
     \label{fig:graphic}
 \end{figure}
