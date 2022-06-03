@@ -94,7 +94,7 @@ irrigação e monitorização agrícola. Além disso, devido ao interesse em
 sensores de baixo custo para monitorizar a agricultura e a água, 
 novos sensores de baixo custo estão a ser propostos em vários estudos. \cite{garcia2020iot}
 
-Em Portugal Continental, no mês de abril de 2022, encontrava-se numa situação de seca, nos 
+Portugal Continental, no mês de abril de 2022, encontrava-se numa situação de seca, nos 
 quais 81,9\% do território encontrava-se em seca moderada e 17,9\% do território em seca severa, 
 segundo o jornal Expresso \cite{expresso}. 
 
@@ -277,6 +277,9 @@ que irá corresponder à humidade do solo, a utilização de percentagem é
 mais user-friendly e consequentemente o sistema dará um feedback mais útil
 para o utilizador. Também poderia ser usado um Raspberry Pi para guardar dados do sensor.
 
+Testou-se o sistema com dois sensores de humidade, mas não se observou variações de valores significativas, 
+sendo que a distinção dos sensores considerou-se não ser relevante.
+
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{soil-moisture-circuit-schema.png}
@@ -376,6 +379,23 @@ a diminuir.
     \label{fig:graphic}
 \end{figure}
 
+Os resultados obtidos revelaram ser muito abaixo dos valores esperados. Sendo que nos testes preliminares 
+foi possível obter valores muito mais elevados, tal que foi possível testar o limite máximo do sensor. Seria 
+expectável que os resultados obtidos através dos testes estivessem mais próximo dos valores verificados 
+durante as simulações. Um valor expectável para o solo húmido seria um valor entre os 600 e os 700, sendo 
+um valor superior a 750 seria considerado como solo demasiado húmido.
+
+Dos testes realizados, verificou-se em dois casos diferentes que para um tipo de solo o valor máximo obtido foi 
+de cerca de 300 e para o caso representado pelo gráfico da figura \ref{fig:graphic} o valor máximmo 
+obtido foi de 400.
+Isto deve-se ao facto de nos dois casos, apesar de se estar a realizar testes com o mesmo tipo de plantas, 
+cada uma das plantas estava plantada em tipos de solo diferentes. A primeira estava plantada num vaso de 
+pequenas dimensões em que o solo é um composto de turfa loira de Sphagnum \cite{jardinssintra}, enquanto que 
+o teste descrito neste artigo, a planta encontra-se plantada em terra. 
+Como mencionado no artigo de Abbas et al. \cite{abbas2014smart}, diferentes solos têm diferentes características 
+sendo uma delas a capacidade de retenção de água. Isto poderá ser um dos factores, não considerados pelos 
+discentes, que terá tido influência nos resultados obtidos.
+
 \section{Conclusão e Trabalho Futuro}
 
 Um dos maiores problemas que vamos enfrentar num futuro próximo é a escassez de água potável,
@@ -392,6 +412,34 @@ ter em conta a previsão do tempo o que pode tornar este sistema menos eficiente
 esta previsão de tempo poderia ser integrada no sistema através de um API que 
 envia os dados de previsão em tempo real e juntamente com os dados do sensor de 
 humidade o sistema tomaria a decisão se regava as plantas ou não.
+
+Não foi possível implementar uma interface gráfica para monitorização do sistema, como era pretendido. 
+O Arduino MKR 1010 wifi foi o microcontrolador escolhido pelo facto de ter capacidade de ligação à Internet. 
+Desta forma, os dados recolhidos poderiam ser enviados para a Arduino Cloud onde o utilizador do sistema poderia, 
+então, monitorizar o sistema através do seu smartphone. No entanto, como já referido, não possível 
+implementar tal interface.
+
+Seria necessário, também a realização de mais testes. Como mencionado no artigo de Abbas et al. \cite{abbas2014smart}, 
+sabe-se que diferentes solos têm características diferentes e que devido a estas diferenças, existem outros 
+fatores a considerar para um sistema de rega inteligente, tais como a capacidade de retenção de água do solo, 
+a estação do ano, mas também outros fatores como o tipo de plantas para o qual o sistema será utilizado.
+
+\subsection{Problemas Encontrados}
+
+Durante a realização do projeto descrito neste artigo, surgiram vários problemas, tanto com o hardware 
+assim como com o software.
+
+A grande maioria dos problemas encontrados com o hardware estavam relacionados com o mau funcionamento dos 
+dispositivos eletrónicos e com más ligações entre os componentes. A solução para estes problemas foi a 
+substituição dos mesmo componentes, especialmente alguns cabos.
+
+Os problemas de software estavam relacionados com o editor de texto e o programa do Arduino. Alguns dos problemas 
+foram resolvidos com a instalação de dependências e bibliotecas para a placa Arduino MKR 1010 wifi. 
+O problema que atrasou mais o desenvolvimento do projeto é um erro do software Arduino nos quais não era possível 
+detetar a placa quando estava ligada a uma das entradas USB do computador. Para se encontrar a resolução 
+consultou-se os vários fóruns, em especial, o fórum da comunidade Arduino. Uma das possíveis soluções era a 
+reinstalação do software bem como todas as dependências e bibliotecas necessárias. Outra solução é colocar a 
+placa Arduino em modo bootloader. \cite{arduinoport}
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
