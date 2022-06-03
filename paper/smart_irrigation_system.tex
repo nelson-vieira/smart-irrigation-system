@@ -93,6 +93,24 @@ irrigação e monitorização agrícola. Além disso, devido ao interesse em
 sensores de baixo custo para monitorizar a agricultura e a água, 
 novos sensores de baixo custo estão a ser propostos em vários estudos. \cite{garcia2020iot}
 
+Em Portugal Continental, no mês de abril de 2022, encontrava-se numa situação de seca, nos 
+quais 81,9\% do território encontrava-se em seca moderada e 17,9\% do território em seca severa, 
+segundo o jornal Expresso \cite{expresso}. 
+
+Segundo o Instituto Português do Mar e da Atmosfera (IPMA), 
+a quantidade de precitpitação até o dia 15 de abril de 2022, teve um valor médio inferior ao valor normal 
+quando comparado com anos anteriores, correspondente a 38\%. Devido à redução da precipitação, 
+a percentagem de água no solo diminuiu em quase todo o país com valores inferiores a 20\%, com alguns locais 
+a atingirem o ponto de emurchecimento. O boletim também contém um gráfico, demonstrado na figura \ref{fig:ipmagraph} 
+que mostra a percentagem de território do país sem situações de seca. \cite{ipmaboletim}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{grafico-seca-portugal.png}
+    \caption{Percentagem do território de Portugal Continental por classe do índice PDSI em situações de seca anteriores em abril (2022 até dia 15)}
+    \label{fig:ipmagraph}
+\end{figure}
+
 Por estes motivos é importante gerir o consumo de água no nosso dia a dia, 
 portanto o que propomos é um sistema de rega inteligente que faz a 
 medição da humidade do solo e rega as plantas apenas durante o tempo 
@@ -238,7 +256,7 @@ Arduino Uno e o sensor de humidade, foi possível observar que o valor máximo o
 era de 1023, quando o recipiente com terra continha demasiada água. Este teste, por ainda 
 não se ter implmentado todo o circuito considerou-se ser um teste preliminar.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[scale=0.06]{sistema-de-rega-teste-ambiente-real.jpg}
     \caption{Teste realizado}
