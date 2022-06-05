@@ -390,8 +390,17 @@ de cerca de 300 e para o caso representado pelo gráfico da figura \ref{fig:grap
 obtido foi de 400.
 Isto deve-se ao facto de nos dois casos, apesar de se estar a realizar testes com o mesmo tipo de plantas, 
 cada uma das plantas estava plantada em tipos de solo diferentes. A primeira estava plantada num vaso de 
-pequenas dimensões em que o solo é um composto de turfa loira de Sphagnum \cite{jardinssintra}, enquanto que 
-o teste descrito neste artigo, a planta encontra-se plantada em terra. 
+pequenas dimensões em que o solo é um composto de turfa loira de Sphagnum \cite{jardinssintra}, 
+como mostra a figura \ref{fig:testconditions}, enquanto que o teste descrito neste artigo, 
+a planta encontra-se plantada em terra. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{rosas-solo-composto.jpg}
+    \caption{Plantas no solo de composto Sphagnum}
+    \label{fig:testconditions}
+\end{figure}
+
 Como mencionado no artigo de Abbas et al. \cite{abbas2014smart}, diferentes solos têm diferentes características 
 sendo uma delas a capacidade de retenção de água. Isto poderá ser um dos factores, não considerados pelos 
 discentes, que terá tido influência nos resultados obtidos.
@@ -406,12 +415,19 @@ sistema muito robusto e que pela sua natureza funciona melhor em pequena escala,
 poderia ser uma ponte para a criação de um sistema mais robusto que funciona-se bem 
 tanto áreas pequenas como jardins ou estufas, como também em áreas maiores como campos agrículas.
 
-Para trabalho futuro pode ser integrado um Raspberry Pi neste sistema para uma melhor 
+Para trabalho futuro poderia ser integrado um Raspberry Pi neste sistema para uma melhor 
 gestão de informação. Um dos pontos fracos que o sistema proposto tem é não 
-ter em conta a previsão do tempo o que pode tornar este sistema menos eficiente, 
-esta previsão de tempo poderia ser integrada no sistema através de um API que 
+ter em conta a previsão do tempo o que pode tornar este sistema menos eficiente. 
+Esta previsão de tempo poderia ser integrada no sistema através de um API que 
 envia os dados de previsão em tempo real e juntamente com os dados do sensor de 
 humidade o sistema tomaria a decisão se regava as plantas ou não.
+
+Este sistema, tal como os sistemas convencionais, também poderia funcionar em horários definidos, 
+visto que os sistema proposto apenas utiliza a humidade do solo, numa estação de maior calor, a humidade do solo 
+irá se reduzir a um ritmo mais acelerado do que numa estação onde as temperaturas são mais baixas. Desta forma, 
+seria possível poupar ainda mais água, bem como energia elétrica, visto que o sistema apenas estaria ligado apenas 
+nas horas indicadas. Sendo que o sensor de humidade do solo, irá se degradar com o tempo, também ajudaria a 
+longevidade do sistema.
 
 Não foi possível implementar uma interface gráfica para monitorização do sistema, como era pretendido. 
 O Arduino MKR 1010 wifi foi o microcontrolador escolhido pelo facto de ter capacidade de ligação à Internet. 
@@ -419,7 +435,8 @@ Desta forma, os dados recolhidos poderiam ser enviados para a Arduino Cloud onde
 então, monitorizar o sistema através do seu smartphone. No entanto, como já referido, não possível 
 implementar tal interface.
 
-Seria necessário, também a realização de mais testes. Como mencionado no artigo de Abbas et al. \cite{abbas2014smart}, 
+Seria necessário, também a realização de mais testes, visto que os valores obtidos estiveram abaixo do 
+esperado. Como mencionado no artigo de Abbas et al. \cite{abbas2014smart}, 
 sabe-se que diferentes solos têm características diferentes e que devido a estas diferenças, existem outros 
 fatores a considerar para um sistema de rega inteligente, tais como a capacidade de retenção de água do solo, 
 a estação do ano, mas também outros fatores como o tipo de plantas para o qual o sistema será utilizado.
