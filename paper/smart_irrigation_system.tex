@@ -10,6 +10,7 @@
 \usepackage[rightcaption]{sidecap}
 \usepackage{wrapfig}
 \usepackage{adjustbox}
+\usepackage{siunitx}
 \usepackage{hyperref}
 \def\UrlBreaks{\do\/\do-}
 \usepackage{graphicx} %package to manage images
@@ -119,9 +120,9 @@ necessário poupando o gasto desnecessário da água de rega.
 
 \section{Trabalhos Relacionados}
 
-Segundo um estudo realizado por García et al, existem 178 artigos 
+Segundo um estudo realizado por García et al. \cite{garcia2020iot}, existem 178 artigos 
 relacionados com  "IoT irrigation, IoT irrigation system, and smart 
-irrigation" \cite{garcia2020iot}, escritos em inglês, no período de entre os 
+irrigation", escritos em inglês, no período de entre os 
 anos de 2014 e 2019, inclusive, dos quais 106 artigos estão relacionados com a 
 utilização de sensores para monitorizar o estado do solo. Destes 106 artigos 
 estudados, todos os artigos abordam a humidade do solo, 9 discutem a temperatura 
@@ -148,21 +149,29 @@ um sensor de monitorização da salinidade da água feito com bobinas de
 cobre \cite{parra2013low} ou um sensor de turbidez da água 
 feito com emissores e recetores de chumbo colorido e infravermelho \cite{sendra2013low}.
 
-
-
 Nas actividades agrícolas que utilizam água, também conhecidas 
 como agricultura irrigada, há diferentes maneiras de distribuir a água. 
 As diferentes opções apresentam eficiência diferente e, em alguns casos, 
 uma forma específica deve ser utilizada para uma cultura específica. 
 As formas específicas de irrigação têm uma grande variedade, mas podemos 
 dividi-las nas seguintes categorias: Podemos considerar a forma de 
-distribuição da água: (i) irrigação por inundação, (ii) irrigação por 
-aspersão, (iii) irrigação por gotejamento, e (iv) irrigação por nebulização. 
-Quanto à existência de sistemas de detecção, podemos ter: (i) irrigação 
-sem qualquer consideração, quando a quantidade de água não é calculada ou 
-estimada, (ii) irrigação programada, quando a água é fornecida de acordo 
-com as necessidades estimadas num período do ano, (iii) irrigação ad hoc, 
-quando a quantidade de água é calculada com base nas medições dos sensores. 
+distribuição da água: 
+
+\begin{itemize}
+\item irrigação por inundação;
+\item irrigação por aspersão;
+\item irrigação gota a gota;
+\item irrigação por nebulização.
+\end{itemize}
+
+Quanto à existência de sistemas de detecção, podemos ter:
+
+\begin{itemize}
+\item irrigação sem qualquer consideração, quando a quantidade de água não é calculada ou estimada;
+\item irrigação programada, quando a água é fornecida de acordo com as necessidades estimadas num período do ano;
+\item irrigação ad hoc, quando a quantidade de água é calculada com base nas medições dos sensores.
+\end{itemize}
+
 A grande maioria dos trabalhos incluídos nesta secção propõe a utilização de 
 bombas e válvulas para distribuir a água em conjunto com sensores para medir os 
 parâmetros ambientais, a fim de calcular as necessidades de água. Dos 89 
@@ -187,16 +196,14 @@ foi criado para operar especificamente com o Arduino. \cite{garcia2020iot}
 Muitos sistemas de rega inteligente têm por base sensores de humidade so solo, como 
 é o caso dos sistemas que vamos analisar de seguida.
 
-\subsection{Caso de Abbas}
+\subsection{Sistema proposto por Abbas et al.}
 
 No estudo realizado por Abbas et al. \cite{abbas2014smart}, os autores propõem 
 um sistema de irrigação inteligente no qual utilizaram uma rede de sensores sem 
 fios para detetar a humidade no solo. Um dos focos do estudo proposto foi a medição 
 do tempo de resposta e a capacidade do sistema identificar a capacidade de 
 retenção de água do tipo de solo no qual os sensores estavam localizados. 
-No entanto, os autores referem que seria necessário ter em consideração outros 
-aspetos, tais como a estação do ano, pois no Verão, é necessário regar as plantas 
-com maior freqência.
+
 Como o solo argiloso pode manter a água por longos períodos. Por outro lado, 
 o solo arenoso não pode manter a água enquanto o solo argiloso for argiloso. 
 Por conseguinte, a água não pode ser mantida, uma vez que a medição da 
@@ -216,9 +223,9 @@ distância relativamente alta do solo. Nesses casos, os nós poderão ser
 levantados em paus altos. Há casos em que o alojamento ou cobertura 
 para os nós é necessária para evitar os seus danos; por exemplo 
 chuva forte, queda de granizo, cobertura de neve, e raios ardentes 
-do sol em longos dias de Verão.
+do sol em longos dias de Verão. \cite{abbas2014smart}
 
-\subsection{Caso de Goap}
+\subsection{Sistema proposto por Goap et al.}
 
 A humidade do solo é um parâmetro crítico para o desenvolvimento de um 
 sistema de irrigação inteligente. A humidade do solo é afectada por uma 
@@ -238,7 +245,7 @@ do sistema é rentável, uma vez que se baseia nas tecnologias de padrão aberto
 O modo automático torna-o um sistema inteligente e pode ser ainda 
 mais personalizado para aplicação cenários específicos. \cite{goap2018an}
 
-\subsection{Caso de Premkumar e Sigappi}
+\subsection{Sistema proposto por Premkumar e Sigappi}
 
 O modelo de aprendizagem proposto por Premkumar e Sigappi \cite{premkumar2022iot} para irrigação é implementado num protótipo 
 de sistema IoT que tem quatro componentes: (i) Camada de nó de borda - 
@@ -260,11 +267,10 @@ proposto. (iv) Camada de servidor de nuvem - Esta camada composta por serviços
 de nuvem e armazenamento de nuvens onde o seu papel é treinar o modelo de 
 aprendizagem da máquina e armazenar os dados na base de dados. Envia o modelo 
 proposto treinado para o servidor de borda para a tomada de decisões relativas 
-à programação da irrigação. As interligações abrangentes no sistema são mostradas 
-na Figura 2. O proposto sistema de irrigação inteligente baseado em IoT inclui 
-cinco componentes principais: módulo implantado no campo, interface baseada na Web, 
-entrada de tempo Web API, humidade do solo mecanismo de previsão, e modelo de 
-comunicação de borda.
+à programação da irrigação. O proposto sistema de irrigação inteligente baseado 
+em IoT inclui cinco componentes principais: módulo implantado no campo, 
+interface baseada na Web, entrada de tempo Web API, humidade do solo 
+mecanismo de previsão, e modelo de comunicação de borda.
 
 
 \section{Métodos e Metadologias}
@@ -279,8 +285,14 @@ qual a poupança que um sistema de rega inteligente proporciona?
 \subsection{O nosso sistema}
 
 O sistema de rega inteligente que propomos faz uso do Arduino MKR 1000 WiFi, 
-de um sensor de humidade do solo, modelo 123, de uma breadboard, de vários LEDs 
-e uma resistência de 200 ohms. Decidimos usar este modelo do Arduino pela ligação 
+de um sensor de humidade do solo, de uma breadboard, de vários LEDs, uma 
+resistência de \SI{200}{\ohm} e um servo motor. O servo motor que estamos a 
+usar neste sistema serve apenas para efeitos de demonstração, pois 
+este sistema teria que ter uma bomba de água para fazer a rega 
+das plantas de forma automática, da forma como está neste momento, este 
+sistema de rega requer a intervenção humana para o seu funcionamento, mas 
+esta não era a intenção da sua criação.
+Decidimos usar este modelo do Arduino pela ligação 
 à rede por Wi-fi que possui, o que nos permite analisar o sistema sem termos de 
 estar no local da instalação, o que podemos fazer através do Arduino Cloud, 
 que envia-nos os resultados do sensor que estamos a usar. Caso o utilizador 
